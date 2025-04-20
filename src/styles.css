@@ -1,0 +1,30 @@
+:root {
+    --primary-color: #ce725f ;    
+    --background: #95ce5f;      
+    --text-color: #404326;       
+  }
+  
+  body {
+    background-color: var(--background);
+    padding: 30px;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  
+  .primary-btn {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+  }
+  .button {
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1px solid #d100ff;
+    background: white;
+  }
+  .input-field {
+    padding: 8px 12px;
+    border: 1px solid #c8d7a9;
+    border-radius: 6px;
+    width: 100%;
+    margin-top: 4px;
+  }

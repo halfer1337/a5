@@ -1,0 +1,29 @@
+<div class="user-form">
+    <div>
+        <label>имя</label>
+        <input name="name" [(ngModel)]="name" (ngModelChange)="onNameChange()" required/>
+    </div>
+    <div>
+        <label>фамилия</label>
+        <input name="surname" [(ngModel)]="surname" required/>
+    </div>
+    <div>
+        <label>возраст</label>
+        <input type="number" name="age" [(ngModel)]="age" required min = "1"/>
+    </div>
+    <div>
+        <button (click)="addUser()">сохранить</button>
+    </div>
+</div>
+<div class ="user-list">
+    <h3><b>список</b></h3>
+    <ul>
+        <li *ngFor="let user of users"> {{user.name}} {{user.surname}} {{user.age}}</li>
+    </ul>
+</div>
+<div>
+    <h3>Студенты</h3>
+    <ul>
+        <li *ngFor="let student of students"> {{student.name}} {{student.surname}}  {{student.group}}</li>
+    </ul>
+</div>

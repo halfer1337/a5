@@ -1,0 +1,25 @@
+<form [formGroup] = "myForm" (ngSubmit)="onSubmit()" class="user-form">
+    <div>
+        <label>имя</label>
+        <input name = "userName" formControlName="userName" />
+    </div>
+    <div *ngIf="myForm.controls['userName'].invalid && myForm.controls['userName'].touched">
+        *обязательно для заполнения
+    </div>
+
+    <div>
+        <label>фамилия</label>
+        <input name = "userSurname" formControlName="userSurname" />
+    </div>
+    <div *ngIf="myForm.controls['userSurname'].invalid && myForm.controls['userSurname'].touched">
+        *обязательно для заполнения
+    </div>
+    <button type="submit" [disabled] = "myForm.invalid">Сохранить</button>
+</form>
+
+<div class ="user-list">
+    <h3><b>список</b></h3>
+    <ul>
+        <li *ngFor="let user of users"> {{user.userSurname}} {{user.userName}}</li>
+    </ul>
+</div>
