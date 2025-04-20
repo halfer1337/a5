@@ -17,7 +17,6 @@ this.name = activateRouter.snapshot.params['name'];
 }
 
 goMain(): void {
-  // this.router.navigate(['/']);
   this.router.navigateByUrl('/');
   }
 }
